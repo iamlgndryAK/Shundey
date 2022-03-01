@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shubham Calendar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #9ADCFF;
+            text-align: center;
+            font-family: 'Luckiest Guy', cursive;
+        }
+
+        .calendar {
+            height: 200px;
+            width: 200px;
+        }
+
+        .quote {
+            display: inline-block;
+            position: relative;
+            top: 100px;
+        }
+
+        .refresh {
+            color: green;
+        }
+
+        .count {
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <h1>Shundey's Calendar</h1>
+        <img class="calendar" src="https://c.tenor.com/_kl1GP-MrvEAAAAi/kalender-calendar.gif" alt="Calendar">
+    </div>
+    <div class="main">
+        <h2>Today is {{ today }}</h2>
+        <h2 class="count">Today's Count: {{ count }}</h2>
+        <h2>{{ second }}</h2>
+        <a class="refresh" href="{{ url_for('home') }}">
+        <h1>Refresh</h1>
+        </a>
+    <div class="quote">
+        <h2>Quote Of The Day:</h2>
+        <h3><em>{{ quote }}</em></h3>
+    </div>
+
+    </div>
+</body>
+</html>
